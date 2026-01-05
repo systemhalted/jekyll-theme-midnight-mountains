@@ -71,6 +71,10 @@ To run the demo site from the repo root:
 bundle exec jekyll serve --source example
 ```
 
+## Screenshot
+
+![image showing the screenshot of the demo](Demo.png "Demo Screenshot")
+
 ## Development
 
 After checking out the repo, run `bin/setup`, then `bundle exec jekyll serve`.
