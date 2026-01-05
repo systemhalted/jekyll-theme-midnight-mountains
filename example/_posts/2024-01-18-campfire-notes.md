@@ -1,0 +1,11 @@
+---
+layout: post
+title: Campfire Notes
+date: 2024-01-18
+image: /assets/images/ember.png
+tags: [campfire, gear]
+---
+
+The best gear conversations happen after the long hike, when the fire is low and the stars feel close. This is the perfect kind of post for a quiet, atmospheric theme.
+
+If you want shorter cards, keep the first paragraph brief. The layout will do the rest.

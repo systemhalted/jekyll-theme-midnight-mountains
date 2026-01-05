@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div class="home-container">
+  <div class="wrapper">
+    
+    <!-- Featured Post -->
+    {% if site.posts.size > 0 %}
+      {% assign featured_post = site.posts.first %}
+      <article class="featured-post">
+        <div class="post-hero" style="background-image: linear-gradient(135deg, rgba(15, 20, 25, 0.2), rgba(15, 20, 25, 0.75)), url('{{ featured_post.image | default: '/assets/images/mountain-1.jpg' | relative_url }}')">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="featured-content">
+          <h2 class="post-title">
+            <a href="{{ featured_post.url | relative_url }}">
+              {{ featured_post.title | escape }}
+            </a>
+          </h2>
+          <p class="post-excerpt">{{ featured_post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </div>
+      </article>
+    {% endif %}
+
+    <!-- Sidebar and Grid -->
+    <div class="content-grid">
+      
+      <!-- Post Grid -->
+      <div class="posts-section">
+        <div class="post-grid">
+          {% for post in site.posts offset:1 limit:8 %}
+            <article class="post-card">
+              <div class="post-thumbnail" style="background-image: linear-gradient(135deg, rgba(15, 20, 25, 0.2), rgba(15, 20, 25, 0.75)), url('{{ post.image | default: '/assets/images/mountain-' | append: forloop.index | append: '.jpg' | relative_url }}')">
+                <div class="thumbnail-overlay"></div>
+              </div>
+              <div class="post-info">
+                <h3 class="post-card-title">
+                  <a href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                  </a>
+                </h3>
+                <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        
+        <!-- Profile Widget -->
+        <div class="widget profile-widget">
+          <div class="profile-avatar"></div>
+          <div class="profile-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <!-- Tags Widget -->
+        <div class="widget tags-widget">
+          <div class="widget-title"></div>
+          <div class="tag-cloud">
+            <span class="tag">Tag 1</span>
+            <span class="tag">Tag 2</span>
+            <span class="tag">Tag 3</span>
+            <span class="tag">Tag 4</span>
+            <span class="tag">Tag 5</span>
+            <span class="tag">Tag 6</span>
+            <span class="tag">Tag 7</span>
+            <span class="tag">Tag 8</span>
+            <span class="tag">Tag 9</span>
+          </div>
+        </div>
+
+        <!-- About Widget -->
+        <div class="widget about-widget">
+          <div class="widget-title"></div>
+          <div class="about-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line short"></div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+</div>

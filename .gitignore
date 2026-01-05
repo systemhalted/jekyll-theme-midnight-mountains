@@ -1,0 +1,13 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/example/_site/
+/example/.jekyll-cache/
+/example/.jekyll-metadata
+vendor
+_site
