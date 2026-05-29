@@ -11,3 +11,8 @@
 /example/.jekyll-metadata
 vendor
 _site
+
+# Editor backup / autosave files
+*~
+\#*\#
+*.gem
