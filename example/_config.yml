@@ -2,8 +2,8 @@
 
 title: Midnight Mountains Demo
 description: A demo site for the Midnight Mountains Jekyll theme.
-url: http://localhost:4000
-baseurl: ""
+url: https://systemhalted.in
+baseurl: /jekyll-theme-midnight-mountains
 lang: en
 
 profile:
